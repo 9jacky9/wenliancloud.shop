@@ -1,0 +1,239 @@
+/* wenliancloud.shop - Nordic Minimalist Slate & Alpine Granite */
+:root {
+  --bg: #F8FAF9;
+  --surface: #FFFFFF;
+  --primary: #064E3B;
+  --primary-hover: #047857;
+  --accent: #059669;
+  --amber: #D97706;
+  --granite: #64748B;
+  --text: #0F172A;
+  --muted: #64748B;
+  --border: #E2E8F0;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  letter-spacing: -0.01em;
+}
+a { color: var(--accent); text-decoration: none; transition: all 0.2s; }
+a:visited { color: var(--accent); }
+a:hover { color: var(--primary); text-decoration: underline; }
+
+.site-header {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.03em;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+}
+.nav-links a {
+  font-size: 0.95rem;
+  color: var(--text);
+  font-weight: 500;
+  padding: 0.3rem 0.6rem;
+  border-radius: 9999px;
+  transition: all 0.2s;
+}
+.nav-links a:hover {
+  background: #ECFDF5;
+  color: var(--primary);
+  text-decoration: none;
+}
+.nav-links .nav-hub-link { color: var(--amber); font-weight: 700; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: 1px solid transparent;
+}
+.btn-primary { background: var(--primary); color: #FFF !important; }
+.btn-primary:hover { background: var(--primary-hover); transform: translateY(-1px); text-decoration: none; }
+.btn-secondary { background: var(--surface); color: var(--text) !important; border-color: var(--border); }
+.btn-secondary:hover { border-color: var(--primary); color: var(--primary) !important; text-decoration: none; }
+
+.hero-nordic {
+  max-width: 1100px;
+  margin: 5rem auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.nordic-label {
+  display: inline-block;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+.hero-nordic h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+}
+.hero-nordic p {
+  font-size: 1.15rem;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+.hero-lighthouse-canvas {
+  background: #FFF;
+  border-radius: 32px;
+  padding: 16px;
+  box-shadow: 0 20px 40px rgba(6, 78, 59, 0.05);
+}
+.hero-illus { width: 100%; height: auto; display: block; border-radius: 20px; }
+
+@keyframes beamSweep {
+  0%, 100% { transform: rotate(-10deg); opacity: 0.5; }
+  50% { transform: rotate(10deg); opacity: 0.95; }
+}
+.lighthouse-beam-sweep2 { animation: beamSweep 6s ease-in-out infinite; transform-origin: 280px 105px; }
+
+.nordic-section {
+  max-width: 1100px;
+  margin: 7rem auto;
+  padding: 0 2rem;
+}
+.nordic-header {
+  margin-bottom: 3.5rem;
+  max-width: 600px;
+}
+.nordic-header h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+.nordic-header p { color: var(--muted); font-size: 1.05rem; }
+
+.pillars-list { display: flex; flex-direction: column; gap: 1.5rem; }
+.pillar-row {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2.5rem 3rem;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  align-items: baseline;
+  gap: 2rem;
+  transition: all 0.2s;
+}
+.pillar-row:hover { border-color: var(--accent); }
+.pillar-num { font-size: 2rem; font-weight: 800; color: #CBD5E1; }
+.pillar-content h3 { font-size: 1.3rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; }
+.pillar-content p { color: var(--muted); font-size: 1rem; }
+
+.scenarios-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.scenario-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+}
+.scenario-card h3 { font-size: 1.25rem; font-weight: 700; color: var(--primary); margin-bottom: 0.6rem; }
+.scenario-card p { color: var(--muted); font-size: 0.95rem; }
+
+.pricing-nordic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.nordic-price-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.nordic-price-card.featured {
+  border: 2px solid var(--primary);
+  box-shadow: 0 15px 35px rgba(6, 78, 59, 0.08);
+}
+.nordic-price-card h3 { font-size: 1.3rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; }
+.nordic-val { font-size: 2.5rem; font-weight: 800; color: var(--primary); margin: 1.25rem 0; }
+.nordic-features { list-style: none; margin: 1.5rem 0 2.5rem 0; flex-grow: 1; }
+.nordic-features li { padding: 0.6rem 0; border-bottom: 1px solid #F1F5F9; color: var(--muted); font-size: 0.95rem; }
+
+.faq-nordic-list { display: flex; flex-direction: column; gap: 1.5rem; max-width: 800px; }
+.faq-nordic-item { border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; }
+.faq-nordic-item h3 { font-size: 1.2rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; }
+.faq-nordic-item p { color: var(--muted); font-size: 1rem; }
+
+.reviews-nordic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.nordic-review {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2.2rem;
+}
+.nordic-review p { font-size: 0.95rem; color: var(--text); line-height: 1.75; margin-bottom: 1.5rem; }
+.reviewer-tag { font-size: 0.85rem; font-weight: 700; color: var(--primary); }
+
+.page-container { max-width: 800px; margin: 4rem auto; padding: 0 2rem; }
+.article-header { border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; margin-bottom: 2.5rem; }
+.article-header h1 { font-size: 2.3rem; font-weight: 800; color: var(--primary); line-height: 1.35; margin-bottom: 1rem; }
+.article-meta { color: var(--muted); font-size: 0.9rem; display: flex; gap: 1.5rem; }
+.article-body { font-size: 1.05rem; line-height: 1.9; }
+.article-body h2 { font-size: 1.6rem; font-weight: 800; color: var(--primary); margin: 2.5rem 0 1rem 0; }
+.article-body h3 { font-size: 1.25rem; font-weight: 700; color: var(--accent); margin: 1.75rem 0 0.75rem 0; }
+.article-body p { margin-bottom: 1.4rem; }
+
+.site-footer { border-top: 1px solid var(--border); background: var(--surface); padding: 4rem 2rem; margin-top: 6rem; }
+.footer-container { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
+.footer-links { display: flex; gap: 2.5rem; }
+.footer-links a { font-size: 0.95rem; font-weight: 600; color: var(--muted); }
+.footer-links a:hover { color: var(--primary); }
+.copyright { color: var(--muted); font-size: 0.85rem; }
+
+@media (max-width: 768px) {
+  .nav-container { flex-wrap: wrap; justify-content: center; padding: 1rem; }
+  .nav-links { order: 3; width: 100%; justify-content: center; gap: 0.75rem; margin-top: 0.5rem; }
+  .hero-nordic { grid-template-columns: 1fr; gap: 2.5rem; margin: 2rem auto; }
+  .hero-nordic h1 { font-size: 2.2rem; }
+  .pillar-row { grid-template-columns: 1fr; gap: 0.5rem; padding: 1.5rem; }
+  .scenarios-grid-3, .pricing-nordic-grid, .reviews-nordic-grid { grid-template-columns: 1fr; }
+  .footer-links { flex-wrap: wrap; justify-content: center; gap: 1.25rem; }
+}
